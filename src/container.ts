@@ -470,7 +470,7 @@ export class Container {
 
       const registration = metadata.get(metadata.registration, key);
 
-      if (registration === undefined) {
+      if (registration === undefined || registration._key === undefined) {
         return this.parent._get(key);
       }
 
